@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+}
+.notice{
+  width:298px;
+  height:98px;
+  margin:10px;
+  border:1px solid #eee;
+  overflow: hidden;
+}
+.notice-list{
+  height:27px;
+  position: relative;
+  background: #ccc;
+}
+
+.notice-list ul{
+  position: absolute;
+  width:301px;
+  left: -1;
+}
+
+.notice-list li{
+  float: left;
+  width:58px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  padding: 0 1px;
+  border-bottom: 1px solid #eee;
+}
+.notice-list li a:link,.notice-list li a:visited{
+  text-decoration: none;
+  color: #000;
+}
