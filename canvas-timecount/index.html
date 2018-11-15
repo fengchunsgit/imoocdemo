@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas timecount</title>
+  <style>
+    #canvas {
+      border: 1px solid #000;
+    }
+
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas">
+    <!-- 支持浏览器，不会显示canvas中的文字，可以用来兼容比较老的浏览器，提醒用户升级 -->
+    您的浏览器不支持，请升级您的浏览器
+  </canvas>
+
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas')
+
+      canvas.width = 1024
+      canvas.height = 768
+      var context = canvas.getContext('2d');
+
+      context.beginPath()
+      // draw a line
+      context.moveTo(100, 100) //state
+      context.lineTo(700, 700) //state
+      context.lineTo(100, 700)
+      context.lineTo(100, 100)
+      context.closePath()
+      context.lineWidth = 5
+      context.strokeStyle = "red"
+
+      // context.fillStyle="rgb(2,100,100)"
+      // context.fill()
+
+      context.stroke() //draw
+
+      context.beginPath()
+      context.moveTo(200, 100)
+      context.lineTo(700, 600)
+      context.closePath()
+
+      context.strokeStyle = "black" //reset color canvas是基于状态的，因此会覆盖第一次绘制的红色三角形
+      context.stroke()
+
+    }
+
+  </script>
+</body>
+
+</html>

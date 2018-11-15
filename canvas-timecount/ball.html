@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<style>
+  #canvas {
+    border: 1px solid #000;
+  }
+
+</style>
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>canvasBall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    var ball = {
+      x: 512,
+      y: 100,
+      r: 20,
+      g: 5,
+      vx: 10,
+      vy: -0,
+      color: '#005588'
+    }
+
+    window.onload = () => {
+      var canvas = document.getElementById('canvas')
+
+      canvas.width = 1024
+      canvas.height = 768
+
+      var context = canvas.getContext('2d')
+
+      setInterval(() => {
+        render(context)
+        update()
+      }, 50);
+    }
+
+    function update() {
+      ball.x += ball.vx
+      ball.y += ball.vy
+      ball.vy += ball.g
+
+      //碰到边界
+      if (ball.y >= 768 - ball.r) {
+        ball.y = 768 - ball.r
+        ball.vy = -ball.vy * 0.5 //损耗
+      }
+      if (ball.x >= 1024 - ball.r) {
+        ball.x = 1024 - ball.r;
+        ball.vx = -ball.vx;
+      }
+      if(ball.x<ball.r){
+        ball.x=ball.r;
+        ball.vx=-ball.vx;
+      }
+    }
+
+    function render(cxt) {
+      cxt.clearRect(0, 0, canvas.width, canvas.height)
+
+      cxt.fillStyle = ball.color
+      cxt.beginPath()
+      cxt.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI)
+      cxt.closePath()
+
+      cxt.fill()
+    }
+
+  </script>
+
+</body>
+
+</html>
