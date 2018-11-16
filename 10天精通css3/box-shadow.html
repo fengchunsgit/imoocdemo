@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>box-shadow</title>
+  <style>
+  .t{
+    width:100px;
+    height:100px;
+    border:1px solid #abc;
+    margin-bottom:20px;
+  }
+
+  #t1{
+    box-shadow: 4px 2px 6px 6px #333;
+  }
+
+  #t2{
+    box-shadow: 4px 2px 6px #d10 inset;
+  }
+
+  #t3{
+    box-shadow: 4px 2px 6px #1e9,4px 2px 6px #31f inset;
+  }
+  #t4{
+    box-shadow: -4px 2px 6px #1e9;
+  }
+  #t5{
+    box-shadow: 4px -2px 6px #1e9;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="t" id="t1">1</div>
+  <div class="t" id="t2">2</div>
+  <div class="t" id="t3">3</div>
+  <div class="t" id="t4">4</div>
+  <div class="t" id="t5">5</div>
+
+</body>
+</html>
