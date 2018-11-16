@@ -148,7 +148,7 @@ background:url(xx.jpg) 10px 20px no-repeat;
 
 而在chrome浏览器中5是存在的，下图的样子：
 
-![chrome效果](/images/chrome.jpg)
+![chrome效果](images/chrome.jpg)
 
 
 - repeat的意思就是重复，目前因为是刚好被整除，效果看不出来。如果改下DIV的宽高，再来看重复的效果：
