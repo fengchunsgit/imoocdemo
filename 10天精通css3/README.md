@@ -3,7 +3,7 @@
 ## [3 颜色相关](color.md)
 ## [4 文字与字体](text&font.md)
 ## [5 与背景相关的样式](background-style.md)
-## [6 CSS选择器]()
+## [6 CSS选择器](selector.md)
 ## [7 CSS中的变形与动画]()
 ## [8 布局样式相关]()
 ## [9 Media Queries与Responsive设计]()
