@@ -3,7 +3,7 @@
 
 语法：
 
-![text-overflow](/images/text-overflow.jpg)
+![text-overflow](images/text-overflow.jpg)
 
 但是`text-overflow`只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示（`white-space:nowrap`）及溢出内容为隐藏（`overflow:hidden`），只有这样才能实现溢出文本显示省略号的效果，代码如下：
 
