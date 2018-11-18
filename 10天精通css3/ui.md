@@ -1,7 +1,7 @@
 # 自由缩放属性resize
 为了增强用户体验，CSS3增加了很多新的属性，其中`resize`就是一个重要的属性，它允许用户通过拖动的方式来修改元素的尺寸来改变元素的大小。任何拥有`overflow`属性的任何容器元素都可以使用。
 
-## 基本语法
+## 语法
 
 ```css
 resize: none | both | horizontal | vertical | inherit
@@ -34,7 +34,7 @@ textarea {
 
 `outline`属性早在CSS2中就出现了，主要是用来在元素周围绘制一条轮廓线，可以起到突出元素的作用。但是并未得到各主流浏览器的广泛支持，在CSS3中对`outline`作了一定的扩展，在以前的基础上增加新特性。
 
-## 基本语法
+## 语法
 
 ```css
 outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit

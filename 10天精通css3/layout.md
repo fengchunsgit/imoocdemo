@@ -1,13 +1,15 @@
 # CSS3 多列布局——Columns
 为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个`多列布局模块`（CSS Multi Column Layout Module）。它主要应用在文本的`多列布局`方面，这种布局在报纸和杂志上都使用了几十年了，但要在Web页面上实现这样的效果还是有相当大的难度，庆幸的是，CSS3的多列布局可以轻松实现。接下来咱们一起学习多列布局相关的知识。
 
-**其语法规则如下:**
+## 语法
 
 ```css
 columns：<column-width> || <column-count>
 ```
 
 多列布局columns属性参数主要就两个属性参数：`列宽`和`列数`。
+
+## 属性
 
 |参数|参数说明|
 |:--:|:--:|
@@ -27,13 +29,13 @@ columns: 200px 2;
 # CSS3 多列布局——column-width
 `column-width`的使用和CSS中的width属性一样，不过不同的是，`column-width`属性在定义元素列宽的时候，既可以单独使用，也可以和多列属性中其他属性配合使用。
 
-**其语法规则如下:**
+## 语法
 
 ```css
 column-width: auto | <length>
 ```
 
-取值说明
+## 属性
 
 |属性值|说明|
 |:--|:--|
@@ -43,13 +45,13 @@ column-width: auto | <length>
 # CSS3 多列布局——column-count
 `column-count`属性主要用来给元素指定想要的列数和允许的最大列数。
 
-**其语法规则如下:**
+## 语法
 
 ```css
 column-count：auto | <integer>
 ```
 
-取值说明：
+## 属性
 
 |属性值|属性值说明|
 |--|--|
@@ -65,13 +67,13 @@ column-count:4;
 # CSS3 列间距column-gap
 `column-gap`主要用来设置列与列之间的间距，
 
-**其语法规则如下:**
+## 语法
 
 ```css
 column-gap: normal || <length>
 ```
 
-取值说明
+## 属性
 
 |属性值|属性值说明|
 |--|--|
@@ -90,13 +92,13 @@ column-gap: 2em;
 # CSS3 列表边框column-rule
 `column-rule`主要是用来定义列与列之间的边框宽度、边框样式和边框颜色。简单点说，就有点类似于常用的border属性。但`column-rule`是不占用任何空间位置的，在列与列之间改变其宽度不会改变任何列的位置。
 
-**其语法规则如下:**
+## 语法
 
 ```
 column-rule:<column-rule-width>|<column-rule-style>|<column-rule-color>
 ```
 
-取值说明：
+## 属性
 
 |属性值|属性值说明|
 |--|--|
@@ -114,12 +116,12 @@ column-rule: 2px dotted green;
 # CSS3 跨列设置column-span
 `column-span`主要用来定义一个分列元素中的子元素能跨列多少。`column-width`、`column-count`等属性能让一元素分成多列，不管里面元素如何排放顺序，他们都是`从左向右`的放置内容，但有时我们需要基中一段内容或一个标题不进行分列，也就是横跨所有列，此时`column-span`就可以轻松实现，
 
-**其语法规则如下:**
+## 语法
 
 ```
 column-span: none | all
 ```
-取值说明
+## 属性
 
 
 |属性值|属性值说明|
@@ -179,13 +181,14 @@ element宽度＝内容宽度（width包含了元素内容宽度、边框、内�
 
 在CSS3中新增加了`box-sizing`属性，能够事先定义盒模型的尺寸解析方式，
 
-**其语法规则如下:**
+## 语法
 
 ```css
 box-sizing: content-box | border-box | inherit
 ```
 
-取值说明
+## 属性
+
 |属性值|属性值说明|
 |--|--|
 |`content-box`|默认值，其让元素维持W3C的标准盒模型，也就是说元素的宽度和高度（`width/height`）等于元素边框宽度（`border`）加上元素内距（`padding`）加上元素内容宽度或高度（`content width/ height`），也就是`element width/height = border + padding + content width / height`|
