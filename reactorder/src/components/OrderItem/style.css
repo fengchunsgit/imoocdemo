@@ -76,6 +76,29 @@
   background-color: #999;
 }
 
+.orderItem__commentContainer div {
+  display: flex;
+  margin-left: 10px;
+}
 .orderItem__commentContainer{
-  width:100%;
+width: 100%;
+}
+.orderItem__star--light {
+  color: #e9203d;
+}
+
+.orderItem__stars {
+  color: #777;
+}
+.orderItem__comment{
+  font-size: 16px;
+  height: 60px;
+  width:90%;
+  margin:0 10px;
+  border-radius: 5px;
+  padding:10px;
+}
+
+button.orderItem__btn.orderItem__btn--grey {
+margin-left:10px;
 }
